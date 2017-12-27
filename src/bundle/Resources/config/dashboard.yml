@@ -1,0 +1,6 @@
+services:
+    Edgar\EzUIBookmark\Tab\Dashboard\BookmarkTab:
+        parent: EzSystems\EzPlatformAdminUi\Tab\AbstractTab
+        public: false
+        tags:
+            - { name: ezplatform.tab, group: dashboard-my }
