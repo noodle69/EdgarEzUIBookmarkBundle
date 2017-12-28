@@ -1,0 +1,28 @@
+{% form_theme form '@EzPlatformAdminUi/form_fields.html.twig' %}
+
+<div class="modal fade ez-modal ez-modal--bookmark" id="bookmark-location-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {{ form_start(form, {'action': path('edgar.ezuibookmark.add')}) }}
+            <div class="modal-body">
+                <p class="ez-modal-body__main">
+                    {{ 'bookmark.modal.message'|trans|desc('Register this location to your bookmark?') }}
+                </p>
+                {{ form_row(form.name) }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary btn--no" data-dismiss="modal">
+                    {{ 'bookmark.form.cancel'|trans|desc('Cancel') }}
+                </button>
+                {{ form_widget(form.bookmark, {'attr': {'class': 'btn-danger'}}) }}
+                {{ form_widget(form.locationId) }}
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>

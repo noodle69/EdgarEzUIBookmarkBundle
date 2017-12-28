@@ -21,6 +21,10 @@ class ConfigureMenuListener implements TranslationContainerInterface
             self::ITEM_BOOKMARK,
             [
                 'extras' => ['icon' => 'pin'],
+                'attributes' => [
+                    'data-toggle' => 'modal',
+                    'data-target' => '#bookmark-location-modal',
+                ],
             ]
         );
     }

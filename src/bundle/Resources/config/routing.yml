@@ -1,0 +1,5 @@
+edgar.ezuibookmark.add:
+    path: /bookmark/add
+    methods: [ "POST" ]
+    defaults:
+        _controller: 'EdgarEzUIBookmarkBundle:Bookmark:add'

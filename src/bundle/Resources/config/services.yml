@@ -1,5 +1,7 @@
 imports:
+    - { resource: controllers.yml }
     - { resource: dashboard.yml }
+    - { resource: components.yml }
 
 services:
     _defaults:
@@ -11,3 +13,4 @@ services:
         public: true
         tags:
           - { name: kernel.event_listener, event: ezplatform_admin_ui.menu_configure.content_sidebar_right, method: onMenuConfigure }
+
