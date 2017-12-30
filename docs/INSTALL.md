@@ -59,3 +59,10 @@ edgar.ezuibookmark:
     defaults:
         siteaccess_group_whitelist: 'admin_group'    
 ```
+
+## Manage assets
+
+```
+php bin/console assets:install --symlink web
+php bin/console assetic:dump
+```
