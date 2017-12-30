@@ -1,28 +1,55 @@
-{% form_theme form '@EzPlatformAdminUi/form_fields.html.twig' %}
+{% form_theme form_add '@EzPlatformAdminUi/form_fields.html.twig' %}
+{% form_theme form_delete '@EzPlatformAdminUi/form_fields.html.twig' %}
 
 <div class="modal fade ez-modal ez-modal--bookmark" id="bookmark-location-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+    {% if is_already_bookmarked(user_id, ezpublish.requestStack.parentRequest.attributes.get('locationId')) %}
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {{ form_start(form_delete, {'action': path('edgar.ezuibookmark.delete')}) }}
+                <div class="modal-body">
+                    <p class="ez-modal-body__main">
+                        {{ 'bookmark.modal.delete.message'|trans|desc('You already registered this location. Are you sure you want to remove this location from your bookmark?') }}
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn--no" data-dismiss="modal">
+                        {{ 'bookmark.form.cancel'|trans|desc('Cancel') }}
+                    </button>
+                    {{ form_widget(form_delete.bookmark, {'attr': {'class': 'btn-danger'}}) }}
+                    {{ form_widget(form_delete.locationId, {'value': ezpublish.requestStack.parentRequest.attributes.get('locationId')}) }}
+                </div>
+                {{ form_end(form_delete) }}
             </div>
-            {{ form_start(form, {'action': path('edgar.ezuibookmark.add')}) }}
-            <div class="modal-body">
-                <p class="ez-modal-body__main">
-                    {{ 'bookmark.modal.message'|trans|desc('Register this location to your bookmark?') }}
-                </p>
-                {{ form_row(form.name) }}
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary btn--no" data-dismiss="modal">
-                    {{ 'bookmark.form.cancel'|trans|desc('Cancel') }}
-                </button>
-                {{ form_widget(form.bookmark, {'attr': {'class': 'btn-danger'}}) }}
-                {{ form_widget(form.locationId) }}
-            </div>
-            {{ form_end(form) }}
         </div>
-    </div>
+    {% else %}
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {{ form_start(form_add, {'action': path('edgar.ezuibookmark.add')}) }}
+                <div class="modal-body">
+                    <p class="ez-modal-body__main">
+                        {{ 'bookmark.modal.add.message'|trans|desc('Register this location to your bookmark?') }}
+                    </p>
+                    {{ form_row(form_add.name) }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn--no" data-dismiss="modal">
+                        {{ 'bookmark.form.cancel'|trans|desc('Cancel') }}
+                    </button>
+                    {{ form_widget(form_add.bookmark, {'attr': {'class': 'btn-danger'}}) }}
+                    {{ form_widget(form_add.locationId, {'value': ezpublish.requestStack.parentRequest.attributes.get('locationId')}) }}
+                </div>
+                {{ form_end(form_add) }}
+            </div>
+        </div>
+    {% endif %}
 </div>

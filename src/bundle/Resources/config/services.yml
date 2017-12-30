@@ -14,3 +14,11 @@ services:
         tags:
           - { name: kernel.event_listener, event: ezplatform_admin_ui.menu_configure.content_sidebar_right, method: onMenuConfigure }
 
+    Edgar\EzUIBookmarkBundle\Templating\Twig\BookmarkExtension:
+        tags:
+            - { name: twig.extension }
+
+    Edgar\EzUIBookmarkBundle\EventListener\ProfileConfigureMenuListener:
+        public: true
+        tags:
+          - { name: kernel.event_listener, event: edgar_ezuiprofile.menu_configure.profile_sidebar_left, method: onMenuConfigure }

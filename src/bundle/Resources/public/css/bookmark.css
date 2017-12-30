@@ -1,0 +1,14 @@
+.edgarezuibookmark-pathlocations {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+}
+
+.edgarezuibookmark-pathlocations-item + .edgarezuibookmark-pathlocations-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #dbdbdb;
+    content: "/";
+}

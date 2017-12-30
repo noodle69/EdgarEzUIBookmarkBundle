@@ -21,6 +21,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
+        new Edgar\EzUIProfileBundle\EdgarEzUIProfileBundle(),
         new Edgar\EzUIBookmarkBundle\EdgarEzUIBookmarkBundle(),
         // ...
     );
@@ -48,6 +49,11 @@ php bin/console doctrine:schema:update --force
 Add to your global configuration app/config/routing.yml
 
 ```yaml
+edgar.ezuiprofile:
+    resource: '@EdgarEzUIProfileBundle/Resources/config/routing.yml'
+    defaults:
+        siteaccess_group_whitelist: 'admin_group'
+        
 edgar.ezuibookmark:
     resource: '@EdgarEzUIBookmarkBundle/Resources/config/routing.yml'
     defaults:

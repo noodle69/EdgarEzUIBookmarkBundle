@@ -1,0 +1,9 @@
+{% if items is defined %}
+    <ol class="edgarezuibookmark-pathlocations px-4">
+        {% for item in items %}
+            <li class="edgarezuibookmark-pathlocations-item">
+                    <a href="{{ item.url }}">{{ item.value }}</a>
+            </li>
+        {% endfor %}
+    </ol>
+{% endif %}

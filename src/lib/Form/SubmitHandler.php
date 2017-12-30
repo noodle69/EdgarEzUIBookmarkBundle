@@ -39,7 +39,27 @@ class SubmitHandler
      *
      * @return null|Response
      */
-    public function handle(FormInterface $form, APIUser $apiUser, callable $handler): ?Response
+    public function handleAdd(FormInterface $form, APIUser $apiUser, callable $handler): ?Response
+    {
+        $data = $form->getData();
+        if ($form->isValid()) {
+            try {
+                $result = $handler($data, $apiUser);
+                if ($result instanceof Response) {
+                    return $result;
+                }
+            } catch (\Exception $e) {
+                $this->notificationHandler->error($e->getMessage());
+            }
+        } else {
+            foreach ($form->getErrors(true, true) as $formError) {
+                $this->notificationHandler->warning($formError->getMessage());
+            }
+        }
+        return null;
+    }
+
+    public function handleDelete(FormInterface $form, APIUser $apiUser, callable $handler): ?Response
     {
         $data = $form->getData();
         if ($form->isValid()) {

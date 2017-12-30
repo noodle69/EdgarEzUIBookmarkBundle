@@ -5,7 +5,7 @@ namespace Edgar\EzUIBookmark\Component;
 use EzSystems\EzPlatformAdminUi\Component\Renderable;
 use Twig\Environment;
 
-class TwigComponent implements Renderable
+class HeadTwigComponent implements Renderable
 {
     /** @var string */
     protected $template;
@@ -38,6 +38,7 @@ class TwigComponent implements Renderable
      */
     public function render(array $parameters = []): string
     {
-        return $this->twig->render($this->template, $parameters + $this->parameters);
+        return $this->twig->render($this->template, [
+            ] + $this->parameters);
     }
 }

@@ -1,0 +1,36 @@
+{% trans_default_domain 'edgarezuibookmark' %}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>{{ 'edgarezuibookmark.th.name'|trans|desc('Name') }}</th>
+        <th>{{ 'edgarezuibookmark.th.location'|trans|desc('Location') }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% if bookmarks is empty %}
+        <tr>
+            <td colspan="5">
+                <span>{{ 'bookmarks.empty'|trans|desc('Sorry, you have no location in your bookmark.') }}</span>
+            </td>
+        </tr>
+    {% else %}
+        {% for bookmark in bookmarks %}
+            <tr >
+                <td>{{ bookmark.name }}</td>
+                <td>
+                    {% set items = [] %}
+                    {% set pathLocations = get_path_locations(bookmark.locationId) %}
+                    {% for pathLocation in pathLocations %}
+                        {% set items = items|merge([{
+                            'value': pathLocation.contentInfo.name,
+                            'url': path('_ezpublishLocation', {'locationId': pathLocation.id})
+                        }]) %}
+                    {% endfor %}
+                    {% include '@EdgarEzUIBookmark/parts/pathlocations.html.twig' with { items: items} %}
+                </td>
+            </tr>
+        {% endfor %}
+    {% endif %}
+    </tbody>
+</table>

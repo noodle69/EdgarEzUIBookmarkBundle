@@ -3,3 +3,14 @@ edgar.ezuibookmark.add:
     methods: [ "POST" ]
     defaults:
         _controller: 'EdgarEzUIBookmarkBundle:Bookmark:add'
+
+edgar.ezuibookmark.delete:
+    path: /bookmark/delete
+    methods: [ "POST" ]
+    defaults:
+        _controller: 'EdgarEzUIBookmarkBundle:Bookmark:delete'
+
+edgar.ezuibookmark.profile:
+    path: /bookmark/profile
+    defaults:
+        _controller: 'EdgarEzUIBookmarkBundle:Bookmark:profile'
