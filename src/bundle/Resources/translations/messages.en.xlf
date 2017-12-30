@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="a94b6268c64a0dce364ccfa9866b4041dff9d41a" resname="Manage your bookmark">
+        <source>Manage your bookmark</source>
+        <target state="new">Manage your bookmark</target>
+        <note>key: Manage your bookmark</note>
+      </trans-unit>
+      <trans-unit id="66f66987dc869c5c50d9d5f7d592be7235c5bdd1" resname="bookmar_form.delete">
+        <source>Remove</source>
+        <target>Remove</target>
+        <note>key: bookmar_form.delete</note>
+      </trans-unit>
+      <trans-unit id="69779182ed11c166cd3356b96a4ac06fb8b210db" resname="bookmar_form.register">
+        <source>Register</source>
+        <target>Register</target>
+        <note>key: bookmar_form.register</note>
+      </trans-unit>
+      <trans-unit id="7d2996cfe811b65a8c6c7319d55068bdc6bf27ea" resname="bookmark.form.cancel">
+        <source>Cancel</source>
+        <target>Cancel</target>
+        <note>key: bookmark.form.cancel</note>
+      </trans-unit>
+      <trans-unit id="ae77dea5b37a4045fec8b1e33ac72ba59ee5d185" resname="bookmark.modal.add.message">
+        <source>Register this location to your bookmark?</source>
+        <target>Register this location to your bookmark?</target>
+        <note>key: bookmark.modal.add.message</note>
+      </trans-unit>
+      <trans-unit id="5b8b9a296ec691e7199991fa588df4a5c44470ba" resname="bookmark.modal.delete.message">
+        <source>You already registered this location. Are you sure you want to remove this location from your bookmark?</source>
+        <target>You already registered this location. Are you sure you want to remove this location from your bookmark?</target>
+        <note>key: bookmark.modal.delete.message</note>
+      </trans-unit>
+      <trans-unit id="340fcae75f84e73691a4c95defe9eab2d606ba5b" resname="bookmarks.empty">
+        <source>Sorry, you have no location in your bookmark.</source>
+        <target state="new">Sorry, you have no location in your bookmark.</target>
+        <note>key: bookmarks.empty</note>
+      </trans-unit>
+      <trans-unit id="eef25495b07b03d9a1991e93a625373df61cbe8c" resname="content__sidebar_right__bookmark">
+        <source>Bookmark</source>
+        <target>Bookmark</target>
+        <note>key: content__sidebar_right__bookmark</note>
+      </trans-unit>
+      <trans-unit id="60f95029de144e486e61a9ea6b6d86b6dd1389f6" resname="edgarezuibookmark.th.location">
+        <source>Location</source>
+        <target state="new">Location</target>
+        <note>key: edgarezuibookmark.th.location</note>
+      </trans-unit>
+      <trans-unit id="f81a5334113149a57ba8527d8ec5124159bfda28" resname="edgarezuibookmark.th.name">
+        <source>Name</source>
+        <target state="new">Name</target>
+        <note>key: edgarezuibookmark.th.name</note>
+      </trans-unit>
+      <trans-unit id="2fe2a969ed833a9ae76befc06c1c934df8701210" resname="user__content__bookmark">
+        <source>My bookmark</source>
+        <target state="new">My bookmark</target>
+        <note>key: user__content__bookmark</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="667849f2d750e13009e21ef02e58acebc7a3dacb" resname="edgar.ezuibookmark.already_bookmarked">
+        <source>You already have registered this location in your bookmark</source>
+        <target>You already have registered this location in your bookmark</target>
+        <note>key: edgar.ezuibookmark.already_bookmarked</note>
+      </trans-unit>
+      <trans-unit id="8624701aa7660102429783eb6f0073cad0022d6a" resname="edgar.ezuibookmark.exception.location : %message%">
+        <source>Error for this location : %message%</source>
+        <target>Error for this location : %message%</target>
+        <note>key: edgar.ezuibookmark.exception.location : %message%</note>
+      </trans-unit>
+      <trans-unit id="c2f0f84c3ebcfe232053dcbd64bf16cd26175266" resname="edgar.ezuibookmark.exception.no_location">
+        <source>This location doesn't exists</source>
+        <target>This location doesn't exists</target>
+        <note>key: edgar.ezuibookmark.exception.no_location</note>
+      </trans-unit>
+      <trans-unit id="08bbc5da3a70c151da790d456293415de333e1fb" resname="edgar.ezuibookmark.not_bookmarked">
+        <source>This location has not been registered in your bookmark</source>
+        <target>This location has not been registered in your bookmark</target>
+        <note>key: edgar.ezuibookmark.not_bookmarked</note>
+      </trans-unit>
+      <trans-unit id="7efd4227463307dd0f64cd338c21de56f36bbd0f" resname="edgar.ezuibookmark.registratered">
+        <source>This location has been registered in your bookmark</source>
+        <target>This location has been registered in your bookmark</target>
+        <note>key: edgar.ezuibookmark.registratered</note>
+      </trans-unit>
+      <trans-unit id="cd32809a0dfea887dc63568fe610693c72dbc19d" resname="edgar.ezuibookmark.unregistratered">
+        <source>This location has been removed from your bookmark</source>
+        <target>This location has been removed from your bookmark</target>
+        <note>key: edgar.ezuibookmark.unregistratered</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

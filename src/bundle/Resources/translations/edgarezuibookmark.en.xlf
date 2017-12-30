@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="340fcae75f84e73691a4c95defe9eab2d606ba5b" resname="bookmarks.empty">
+        <source>Sorry, you have no location in your bookmark.</source>
+        <target>Sorry, you have no location in your bookmark.</target>
+        <note>key: bookmarks.empty</note>
+      </trans-unit>
+      <trans-unit id="60f95029de144e486e61a9ea6b6d86b6dd1389f6" resname="edgarezuibookmark.th.location">
+        <source>Location</source>
+        <target>Location</target>
+        <note>key: edgarezuibookmark.th.location</note>
+      </trans-unit>
+      <trans-unit id="f81a5334113149a57ba8527d8ec5124159bfda28" resname="edgarezuibookmark.th.name">
+        <source>Name</source>
+        <target>Name</target>
+        <note>key: edgarezuibookmark.th.name</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
