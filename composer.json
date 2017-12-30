@@ -19,6 +19,7 @@
   },
   "require": {
     "php": ">=7.1",
+    "doctrine/orm": "^2.6",
     "ezsystems/ezpublish-kernel": "^7.0",
     "ezsystems/ezplatform-admin-ui": "^1.0",
     "edgar/ez-uiprofile-bundle": "^1.0"
