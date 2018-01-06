@@ -22,3 +22,7 @@ services:
         public: true
         tags:
           - { name: kernel.event_listener, event: edgar_ezuiprofile.menu_configure.profile_sidebar_left, method: onMenuConfigure }
+
+    Edgar\EzUIBookmarkBundle\SignalSlot\Slot\DeleteLocationSlot:
+        tags:
+            - { name: ezpublish.api.slot, signal: LocationService\DeleteLocationSignal }

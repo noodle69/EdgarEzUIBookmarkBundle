@@ -57,6 +57,12 @@ class BookmarkService
         $this->repository->unRegister($userId, $locationId);
     }
 
+    public function unRegisterLocation(int $locationId)
+    {
+        $this->repository->unRegisterLocation($locationId);
+    }
+
+
     /**
      * @param int|null $locationId
      * @return bool

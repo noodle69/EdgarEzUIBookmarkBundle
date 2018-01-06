@@ -22,4 +22,16 @@ class EdgarEzBookmarkRepository extends EntityRepository
         }
     }
 
+    public function unRegisterLocation(int $locationId)
+    {
+        $bookmarks = $this->findBy(['locationId' => $locationId]);
+        if ($bookmarks) {
+            foreach ($bookmarks as $bookmark) {
+                $this->getEntityManager()->remove($bookmark);
+            }
+
+            $this->getEntityManager()->flush();
+        }
+    }
+
 }

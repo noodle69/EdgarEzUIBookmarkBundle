@@ -8,7 +8,7 @@
     <body>
       <trans-unit id="a94b6268c64a0dce364ccfa9866b4041dff9d41a" resname="Manage your bookmark">
         <source>Manage your bookmark</source>
-        <target state="new">Manage your bookmark</target>
+        <target>Manage your bookmark</target>
         <note>key: Manage your bookmark</note>
       </trans-unit>
       <trans-unit id="66f66987dc869c5c50d9d5f7d592be7235c5bdd1" resname="bookmar_form.delete">
@@ -38,7 +38,7 @@
       </trans-unit>
       <trans-unit id="340fcae75f84e73691a4c95defe9eab2d606ba5b" resname="bookmarks.empty">
         <source>Sorry, you have no location in your bookmark.</source>
-        <target state="new">Sorry, you have no location in your bookmark.</target>
+        <target>Sorry, you have no location in your bookmark.</target>
         <note>key: bookmarks.empty</note>
       </trans-unit>
       <trans-unit id="eef25495b07b03d9a1991e93a625373df61cbe8c" resname="content__sidebar_right__bookmark">
@@ -48,17 +48,17 @@
       </trans-unit>
       <trans-unit id="60f95029de144e486e61a9ea6b6d86b6dd1389f6" resname="edgarezuibookmark.th.location">
         <source>Location</source>
-        <target state="new">Location</target>
+        <target>Location</target>
         <note>key: edgarezuibookmark.th.location</note>
       </trans-unit>
       <trans-unit id="f81a5334113149a57ba8527d8ec5124159bfda28" resname="edgarezuibookmark.th.name">
         <source>Name</source>
-        <target state="new">Name</target>
+        <target>Name</target>
         <note>key: edgarezuibookmark.th.name</note>
       </trans-unit>
       <trans-unit id="2fe2a969ed833a9ae76befc06c1c934df8701210" resname="user__content__bookmark">
         <source>My bookmark</source>
-        <target state="new">My bookmark</target>
+        <target>My bookmark</target>
         <note>key: user__content__bookmark</note>
       </trans-unit>
     </body>
