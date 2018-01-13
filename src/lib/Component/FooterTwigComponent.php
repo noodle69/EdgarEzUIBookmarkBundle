@@ -16,11 +16,6 @@ class FooterTwigComponent implements Renderable
     /** @var array */
     protected $parameters;
 
-    /**
-     * @param Environment $twig
-     * @param string $template
-     * @param array $parameters
-     */
     public function __construct(
         Environment $twig,
         string $template,
@@ -38,7 +33,12 @@ class FooterTwigComponent implements Renderable
      */
     public function render(array $parameters = []): string
     {
-        return $this->twig->render($this->template, [
-        ] + $this->parameters);
+        try {
+            return $this->twig->render($this->template, [
+                ] + $this->parameters);
+        } catch (\Exception $e) {
+            return '';
+        }
+
     }
 }

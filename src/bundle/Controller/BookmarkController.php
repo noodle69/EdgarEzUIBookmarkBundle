@@ -7,8 +7,6 @@ use Edgar\EzUIBookmark\Form\SubmitHandler;
 use Edgar\EzUIBookmarkBundle\Entity\EdgarEzBookmark;
 use Edgar\EzUIBookmarkBundle\Exception\BookmarkException;
 use Edgar\EzUIBookmarkBundle\Service\BookmarkService;
-use eZ\Publish\API\Repository\Exceptions\NotFoundException;
-use eZ\Publish\API\Repository\Exceptions\UnauthorizedException;
 use EzSystems\EzPlatformAdminUi\Notification\NotificationHandlerInterface;
 use EzSystems\EzPlatformAdminUiBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
