@@ -51,11 +51,13 @@ Add to your global configuration app/config/routing.yml
 ```yaml
 edgar.ezuiprofile:
     resource: '@EdgarEzUIProfileBundle/Resources/config/routing.yml'
+    prefix: /_profile
     defaults:
         siteaccess_group_whitelist: 'admin_group'
         
 edgar.ezuibookmark:
     resource: '@EdgarEzUIBookmarkBundle/Resources/config/routing.yml'
+    prefix: /_bookmark
     defaults:
         siteaccess_group_whitelist: 'admin_group'    
 ```
